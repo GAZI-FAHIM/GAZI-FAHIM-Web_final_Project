@@ -146,8 +146,8 @@ Contributions and suggestions are warmly welcomed! Whether it’s UI enhancement
 
 ## 📬 Developer & Contact
 
-* 🧑‍💻 Developer: **Abdullah AL Alam Shanto**
-* 📧 Email: [abdullahshanto12.com](mailto:your.email@example.com)
+* 🧑‍💻 Developer: **Gazi Fahim**
+* 📧 Email: [gazifahim0503@gmail.com](mailto:your.email@example.com)
 * 🌐 Dedicated to improving women’s safety and confidence in public spaces.
 
 ---
