@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeWay – Women’s Safety System</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0a1840;
+      --secondary: #ffffff;
+      --accent: #fce4ec;
+      --highlight: #6940ff;
+      --gradient: linear-gradient(to right, #ffecd2, #fcb69f);
+      --text: #333333;
+      --dark-bg: #121212;
+      --dark-text: #f1f1f1;
+      --dark-card: #1f1f1f;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--gradient);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      background: var(--dark-bg);
+      color: var(--dark-text);
+    }
+
+    .dark-mode .card {
+      background: var(--dark-card);
+      color: var(--dark-text);
+    }
+
+    .dark-mode .navbar,
+    .dark-mode footer {
+      background: #1a1a1a;
+    }
+
+    .navbar {
+      background: var(--primary);
+      color: var(--secondary);
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .navbar .logo {
+      font-size: 1.8rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 5rem 2rem;
+      text-align: center;
+      background: var(--gradient);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero p {
+      margin: 1rem 0 2rem;
+    }
+
+    .btn {
+      background: var(--highlight);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #b01ee9;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background: var(--accent);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card i {
+      font-size: 2rem;
+      color: var(--highlight);
+      margin-bottom: 0.5rem;
+    }
+
+    .featured::after {
+      content: 'Featured';
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--highlight);
+      color: white;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.75rem;
+      border-top-right-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 64, 191, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(255,64,129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255,64,129, 0); }
+    }
+
+    .marker {
+      background: linear-gradient(120deg, #ffff8d 30%, transparent 30%);
+      display: inline;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--primary);
+      color: var(--secondary);
+    }
+
+    @media (max-width: 600px) {
+      .navbar, .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">SafeWay</div>
+    <ul class="nav-links">
+      <li><a href="#">🏠 Home</a></li>
+      <li><a href="#services">🛠️ Services</a></li>
+      <li><a href="#features">⚡ Features</a></li>
+      <li><a href="#blog">✍️ Blog</a></li>
+      <li><a href="#partners">🤝 Partners</a></li>
+      <li><a href="#contact">📞 Contact</a></li>
+    </ul>
+  </nav>
+
+<section class="hero">
+  <h1><span class="marker">Explore</span> Your SafeWay Dashboard</h1>
+  <p>Your interactive catalog to navigate all system features.</p>
+  <a class="btn" href="login.html">Get Started</a>
+</section>
+
+
+  <section id="services" class="grid">
+    <div class="card featured">
+      <i class="fas fa-bell pulse"></i>
+      <h3>New Updates</h3>
+      <p>Check the latest safety improvements and news.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-tools"></i>
+      <h3>System Tools</h3>
+      <p>Manage tracking, alerts and user preferences.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-chart-bar"></i>
+      <h3>Analytics</h3>
+      <p>View detailed usage and location metrics.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-envelope"></i>
+      <h3>Messages</h3>
+      <p>View and send support or emergency messages.</p>
+    </div>
+  </section>
+
+  <section id="features" class="grid">
+    <div class="card">
+      <i class="fas fa-map-marked-alt"></i>
+      <h3>Explore Safe Routes</h3>
+      <p>Navigate with confidence using real-time safety route mapping powered by community feedback and lighting scores.</p>
+    </div>
+    <div class="card featured">
+      <i class="fas fa-bolt pulse"></i>
+      <h3>Live Incident Alerts</h3>
+      <p>Receive alerts about nearby risks instantly. Powered by geofencing and crowd-sourced reports.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Personal Dashboard</h3>
+      <p>Track your reports, manage alerts, and configure safety zones from your private dashboard.</p>
+    </div>
+  </section>
+
+<section class="hero" style="background: var(--highlight); color: white;">
+  <h1>Get Involved</h1>
+  <p>Join our community of guardians, developers, and safety advocates.</p>
+<a class="btn" href="signup.php" style="background-color: #992c14; color: white;">Join Now</a>
+</section>
+
+
+  <section id="partners" class="grid">
+    <div class="card">
+      <i class="fas fa-hands-helping"></i>
+      <h3>NGO Partners</h3>
+      <p>Connect with verified NGOs offering local support for women's welfare and empowerment.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-graduation-cap"></i>
+      <h3>Educational Programs</h3>
+      <p>Free workshops and self-defense courses offered monthly via our partnered institutions.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-users"></i>
+      <h3>Community Chats</h3>
+      <p>Discuss incidents, share advice, and support others via moderated chat spaces.</p>
+    </div>
+  </section>
+
+  <section id="blog" class="grid">
+    <div class="card">
+      <i class="fas fa-book-open"></i>
+      <h3>Blog Articles</h3>
+      <p>Read about women's safety tips and success stories.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-newspaper"></i>
+      <h3>Newsletter</h3>
+      <p>Stay updated monthly via email subscription.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="grid">
+    <div class="card">
+      <i class="fas fa-phone"></i>
+      <h3>Call Support</h3>
+      <p>Dial our helpline for urgent assistance.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-comments"></i>
+      <h3>Live Chat</h3>
+      <p>Talk to our agent for quick help.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-map-marker-alt"></i>
+      <h3>Visit Us</h3>
+      <p>Find our nearest support center location.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SafeWay. All rights reserved.</p>
+  </footer>
+
+  <button class="toggle-btn" onclick="document.body.classList.toggle('dark-mode')">
+    Toggle Dark Mode
+  </button>
+</body>
+</html>

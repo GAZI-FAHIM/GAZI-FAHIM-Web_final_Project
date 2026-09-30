@@ -1,0 +1,19 @@
+/* Custom Warehouse Page Styling */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#warehouse-map {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.card-title {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.table {
+    margin-top: 10px;
+}
